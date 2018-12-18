@@ -89,8 +89,8 @@ class ListsController < ApplicationController
   end
 
   def card3
+    sleep(3)
     @no = 0
-
     @rcards = Rcard.where(list_id: params[:id1])
     @card = @rcards[0]
   end
