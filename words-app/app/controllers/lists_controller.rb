@@ -74,7 +74,7 @@ class ListsController < ApplicationController
 
   def card3
     @no = params[:id2].to_i
-    if @no == 0
+    if params[:id2].to_i == 0
       @rcards = Rcard.where(list_id: params[:id1])
       @rcards.each do |rcard|
         rcard.destroy
