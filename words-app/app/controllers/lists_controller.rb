@@ -90,9 +90,7 @@ class ListsController < ApplicationController
 
   def card3
     sleep(3)
-    @no = 0
-    @rcards = Rcard.where(list_id: params[:id1])
-    @card = @rcards[0]
+    redirect_to("/lists/#{params[:id1]}/card5/#{params[:id2]}")
   end
 
   def card5
