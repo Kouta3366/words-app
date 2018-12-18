@@ -1,4 +1,20 @@
 class ListsController < ApplicationController
+  before_action :before_card3, {only:[:card3]}
+
+  def before_card3
+    @rcards = Rcard.where(list_id: params[:id1])
+    @rcards.each do |rcard|
+      rcard.destroy
+    end
+    @cards = Card.order("RANDOM()").where(list_id: params[:id1])
+    @cards.each do |card|
+      @rcard = Rcard.new(list_id: card.list_id,
+                         word: card.word,
+                         meaning: card.meaning)
+      @rcard.save
+    end
+  end
+
   def start
     @list = List.find_by(id: params[:id])
     @cards = Card.where(list_id: @list.id)
@@ -74,17 +90,6 @@ class ListsController < ApplicationController
 
   def card3
     @no = 0
-    @rcards = Rcard.where(list_id: params[:id1])
-    @rcards.each do |rcard|
-      rcard.destroy
-    end
-    @cards = Card.order("RANDOM()").where(list_id: params[:id1])
-    @cards.each do |card|
-      @rcard = Rcard.new(list_id: card.list_id,
-                         word: card.word,
-                         meaning: card.meaning)
-      @rcard.save
-    end
 
     @rcards = Rcard.where(list_id: params[:id1])
     @card = @rcards[0]
