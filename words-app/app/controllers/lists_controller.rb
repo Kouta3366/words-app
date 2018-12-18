@@ -74,11 +74,30 @@ class ListsController < ApplicationController
 
   def card3
     @no = params[:id2].to_i
-    @kk = 5
-
-
+    if params[:id2].to_i == 0
+      @rcards = Rcard.where(list_id: params[:id1])
+      @rcards.each do |rcard|
+        rcard.destroy
+      end
+      @cards = Card.order("RANDOM()").where(list_id: params[:id1])
+      @cards.each do |card|
+        @rcard = Rcard.new(list_id: card.list_id,
+                           word: card.word,
+                           meaning: card.meaning)
+        @rcard.save
+      end
+    end
     @rcards = Rcard.where(list_id: params[:id1])
-    @card = @rcards[@no]
+    @card = @rcards[params[:id2].to_i]
+    if @card == nil
+      redirect_to("/lists/end")
+    end
+  end
+
+  def card5
+    @no = params[:id2].to_i
+    @rcards = Rcard.where(list_id: params[:id1])
+    @card = @rcards[params[:id2].to_i]
     if @card == nil
       redirect_to("/lists/end")
     end

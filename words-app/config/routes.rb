@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   get "lists/:id1/card2/:id2" => "lists#card2"
   get "lists/:id1/card3/:id2" => "lists#card3"
   get "lists/:id1/card4/:id2" => "lists#card4"
+  get "lists/:id1/card5/:id2" => "lists#card5"
   get "lists/end" => "lists#end"
 end
