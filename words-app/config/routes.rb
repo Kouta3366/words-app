@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home/about'
   post "users/create" => "users#create"
   get 'home/top'
-  post "logout" => "users#logout"
+  get "logout" => "users#logout"
   post "login" => "users#login"
   post "lists/:id/start" => "lists#start"
   get "lists/new" => "lists#new"
