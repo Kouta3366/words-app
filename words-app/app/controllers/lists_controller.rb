@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
-  before_action :before_card3, {only:[:card3]}
+  before_action :before_card3card4, {only:[:card3,:card4]}
 
-  def before_card3
+  def before_card3card4
     @rcards = Rcard.where(list_id: params[:id1])
     @rcards.each do |rcard|
       rcard.destroy
@@ -89,7 +89,6 @@ class ListsController < ApplicationController
   end
 
   def card3
-    sleep(3)
     redirect_to("/lists/#{params[:id1]}/card5/#{params[:id2]}")
   end
 
@@ -103,22 +102,13 @@ class ListsController < ApplicationController
   end
 
   def card4
+    redirect_to("/lists/#{params[:id1]}/card6/#{params[:id2]}")
+  end
+
+  def card6
     @no = params[:id2].to_i
-    if @no == 0
-      @rcards = Rcard.where(list_id: params[:id1])
-      @rcards.each do |rcard|
-        rcard.destroy
-      end
-      @cards = Card.order("RANDOM()").where(list_id: params[:id1])
-      @cards.each do |card|
-        @rcard = Rcard.new(list_id: card.list_id,
-                           word: card.word,
-                           meaning: card.meaning)
-        @rcard.save
-      end
-    end
     @rcards = Rcard.where(list_id: params[:id1])
-    @card = @rcards[@no]
+    @card = @rcards[params[:id2].to_i]
     if @card == nil
       redirect_to("/lists/end")
     end
