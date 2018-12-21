@@ -105,6 +105,13 @@
    position: relative;
  }
 
+ .item2 {
+   width: 25%;
+   float: left;
+   padding: 20px 30px 130px 30px;
+   position: relative;
+ }
+
  .item-box {
    height: 80px;
    width: 100%;
@@ -125,7 +132,6 @@
    right: 30px;
  }
 
- /* /home/top ================================ */
  .list-name {
    text-align: center;
    font-size: 30px;
@@ -177,6 +183,7 @@
   width: 25%;
   float: right;
   padding: 20px 30px 20px 30px;
+  margin-bottom: 80px;
 }
 
 /* /lists/edit2 ================================ */
@@ -343,6 +350,10 @@
      width: 50%;
    }
 
+   .item2 {
+     width: 50%;
+   }
+
    .start-item {
      width: 50%;
    }
@@ -387,6 +398,10 @@
    }
 
    .item {
+     width: 100%;
+   }
+
+   .item2 {
      width: 100%;
    }
 
