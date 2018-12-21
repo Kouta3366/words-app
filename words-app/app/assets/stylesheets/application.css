@@ -283,6 +283,7 @@
    font-weight: 1000;
    color: black;
    background-color: #98fb98;
+   text-align: center;
  }
 
  .hidden2 {
@@ -331,7 +332,7 @@
 
  .card-box-end {
    text-align: center;
-   font-size: 30px;
+   font-size: 25px;
    line-height: 100px;
  }
 
