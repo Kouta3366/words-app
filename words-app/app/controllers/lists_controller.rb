@@ -43,8 +43,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find_by(id: params[:id])
-    @lists = List.where(user_id: @current_user.id)
-    @cards = Card.where(list_id: params[:id])
+    @cards = Card.where(list_id: params[:id]).all.order(created_at: :desc)
   end
 
   def edit
