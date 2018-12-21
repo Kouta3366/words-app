@@ -190,14 +190,20 @@
 .edit-button {
   margin: 30px;
   text-align: center;
+  margin-left: 200px;
+}
+
+.edit-button2 {
+  margin-top: -62px;
+  text-align: center;
+  margin-right: 200px;
 }
 
 .edit-button-left {
   height: 30px;
-  width: 120px;
+  width: 130px;
   font-size: 20px;
   font-weight: 800;
-  margin-right: 20px;
 }
 
 .edit-button-right {
@@ -205,7 +211,6 @@
   width: 130px;
   font-size: 20px;
   font-weight: 800;
-  margin-left: 20px;
 }
 
 /* /lists/:id/card#/:id2 ================================ */
