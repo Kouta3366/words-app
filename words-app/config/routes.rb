@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post "card/:id/create" => "lists#new_card"
   get "lists/:id/edit2" => "lists#edit2"
   post "card/:id/update" => "lists#update"
-  post "card/:id/destroy" => "lists#destroy"
+  get "card/:id/destroy" => "lists#destroy"
   get "lists/:id1/card1/:id2" => "lists#card1"
   get "lists/:id1/card2/:id2" => "lists#card2"
   get "lists/:id1/card3/:id2" => "lists#card3"

@@ -16,7 +16,7 @@
         <textarea name="meaning"><%= @card.meaning %></textarea>
       </div>
       <div class="edit-button">
-        <div class="edit-button-left"><%= link_to("削除", "/card/#{@card.id}/destroy", {method: :post}) %></div>
+        <div class="edit-button-left"><%= link_to("削除", "/card/#{@card.id}/destroy") %></div>
 
         <input class="edit-button-right" type="submit" value="変更">
       </div>
