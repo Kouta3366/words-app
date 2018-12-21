@@ -70,7 +70,7 @@ class ListsController < ApplicationController
   end
 
   def card1
-    @cards = Card.where(list_id: params[:id1])
+    @cards = Card.where(list_id: params[:id1]).all.order(created_at: :asc)
     @no = params[:id2].to_i
     @card = @cards[@no]
     if @card == nil
@@ -79,7 +79,7 @@ class ListsController < ApplicationController
   end
 
   def card2
-    @cards = Card.where(list_id: params[:id1])
+    @cards = Card.where(list_id: params[:id1]).all.order(created_at: :asc)
     @no = params[:id2].to_i
     @card = @cards[@no]
     if @card == nil
