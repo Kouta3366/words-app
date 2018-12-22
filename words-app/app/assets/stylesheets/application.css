@@ -230,14 +230,13 @@
 
  .card-box-left {
    position: absolute;
-   top: 50px;
+   top: 30px;
    left: 5%;
    width: 35%;
-   height: 60px;
+   height: 100px;
    display: inline-block;
    vertical-align: middle;
    z-index: 9;
-   background-color: green;
  }
 
  .card-box-right {
@@ -248,13 +247,12 @@
    width: 50%;
    display: inline-block;
    vertical-align: middle;
-   background-color: blue;
 }
 
  .card-box-left-name {
    font-weight: 1000;
    word-break: break-all;
-   font-size: 20px;
+   font-size: 18px;
    color: red;
  }
 
@@ -266,10 +264,10 @@
 
  .hidden {
    position: absolute;
-   top: 30px;
+   top: 0;
    left: 0;
    width: 45%;
-   height: 100px;
+   height: 160px;
    display: inline-block;
    vertical-align: middle;
    z-index: 10;
