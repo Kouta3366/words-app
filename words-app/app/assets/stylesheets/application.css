@@ -197,26 +197,26 @@
 }
 
 .item3-left {
-  margin-right: 180px;
+  margin-left: -100px;
   margin-bottom: -40px;
 
 }
 
 .item3-right {
-  margin-left: 120px;
+  margin-right: -150px;
   margin-top: -40px;
 }
 
 .item3-destroy {
   height: 40px;
-  width: 110px;
+  width: 130px;
   font-size: 12px;
   font-weight: 800;
 }
 
 .item3-new {
   height: 40px;
-  width: 80px;
+  width: 60px;
   font-size: 12px;
   font-weight: 800;
 }
