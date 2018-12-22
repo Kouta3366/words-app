@@ -230,10 +230,10 @@
 
  .card-box-left {
    position: absolute;
-   top: 0;
-   left: 0;
-   width: 45%;
-   height: 160px;
+   top: 50px;
+   left: 5%;
+   width: 35%;
+   height: 60px;
    display: inline-block;
    vertical-align: middle;
    z-index: 9;
@@ -243,9 +243,9 @@
  .card-box-right {
    position: absolute;
    top: 30px;
-   left: 55%;
+   left: 45%;
    height: 100px;
-   width: 35%;
+   width: 50%;
    display: inline-block;
    vertical-align: middle;
    background-color: blue;
@@ -253,14 +253,12 @@
 
  .card-box-left-name {
    font-weight: 1000;
-   line-height: 140px;
-   text-align: center;
+   word-break: break-all;
    font-size: 20px;
    color: red;
  }
 
  .card-box-right-name {
-   height: 100px;
    word-break: break-all;
    font-weight: 600;
    font-size: 17px;
@@ -290,8 +288,8 @@
  .hidden2 {
    position: absolute;
    top: 0;
-   left: 45%;
-   width: 55%;
+   left: 40%;
+   width: 60%;
    height: 160px;
    display: inline-block;
    vertical-align: middle;
