@@ -14,34 +14,51 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $(function(){
+      $("#menubtn").click(function(){
+        $("#menu").slideToggle();
+      });
+    });
+    </script>
+
   </head>
 
   <body>
     <header>
-      <div class="container">
+      <div class="h-container">
         <div class="header-left">
           <a href="/home/about">暗記アプリ</a>
         </div>
-        <ul class="header-right">
-          <% if @current_user %>
-            <li>
-              <%= @current_user.name %>
-            </li>
-            <li>
-              <%= link_to("単語リスト一覧", "/home/top") %>
-            </li>
-            <li>
-              <%= link_to("ログアウト", "/logout") %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to("新規登録", "/signup") %>
-            </li>
-            <li>
-              <%= link_to("ログイン", "/login") %>
-            </li>
-          <% end %>
-        </ul>
+
+        <button type="button" id="menubtn">
+          <i class="fa fa-bars"></i><span>MENU</span>
+        </button>
+
+        <nav class="menu" id="menu">
+          <ul class="header-right">
+            <% if @current_user %>
+              <li>
+                <%= @current_user.name %>
+              </li>
+              <li>
+                <%= link_to("単語リスト一覧", "/home/top") %>
+              </li>
+              <li>
+                <%= link_to("ログアウト", "/logout") %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to("新規登録", "/signup") %>
+              </li>
+              <li>
+                <%= link_to("ログイン", "/login") %>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
       </div>
     </header>
 
