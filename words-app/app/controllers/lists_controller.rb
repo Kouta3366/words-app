@@ -137,4 +137,20 @@ class ListsController < ApplicationController
       redirect_to("/lists/#{@list.id}/show")
     end
   end
+
+  def list_destroy
+    @rcards = Rcard.where(list_id: params[:id])
+    @rcards.each do |rcard|
+      rcard.destroy
+    end
+    @cards = Card.where(list_id: params[:id])
+    @cards.each do |card|
+      card.destroy
+    end
+    @list = List.find_by(id: params[:id])
+    if @list.destroy
+      flash[:notice] = "リストを削除しました"
+      redirect_to("/home/top")
+    end
+  end
 end

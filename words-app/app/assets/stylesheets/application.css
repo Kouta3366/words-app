@@ -186,6 +186,41 @@
   margin-bottom: 80px;
 }
 
+/* /lists/show ================================ */
+.item3 {
+  width: 25%;
+  float: left;
+  padding: 20px 30px 20px 30px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.item3-left {
+  margin-right: 180px;
+  margin-bottom: -40px;
+
+}
+
+.item3-right {
+  margin-left: 120px;
+  margin-top: -40px;
+}
+
+.item3-destroy {
+  height: 40px;
+  width: 110px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.item3-new {
+  height: 40px;
+  width: 80px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 /* /lists/edit2 ================================ */
 .edit-button {
   margin: 30px;
@@ -357,6 +392,10 @@
      width: 50%;
    }
 
+   .item3 {
+     width: 50%;
+   }
+
    .start-item {
      width: 50%;
    }
@@ -405,6 +444,10 @@
    }
 
    .item2 {
+     width: 100%;
+   }
+
+   .item3 {
      width: 100%;
    }
 

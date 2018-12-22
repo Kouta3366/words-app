@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   get "lists/:id1/card5/:id2" => "lists#card5"
   get "lists/:id1/card6/:id2" => "lists#card6"
   get "lists/end" => "lists#end"
+  post "lists/:id/destroy" => "lists#list_destroy"
 end
