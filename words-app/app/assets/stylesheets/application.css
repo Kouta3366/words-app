@@ -489,7 +489,7 @@
  /* スマートフォン向けレイアウト */
  @media (max-width: 670px) {
    #menu {
-     display;
+     display: none;
    }
 
    .item {
